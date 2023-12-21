@@ -1,11 +1,45 @@
 import { useForm } from "react-hook-form";
+import useAxios from "../../Hooks/useAxios";
+import { useContext } from "react";
+import { AuthContext } from "../../Shared/AuthProvider";
+import Swal from "sweetalert2";
 
 
 const CreateTask = () => {
+    const {user} = useContext(AuthContext)
+    const axiosPublic = useAxios()
     const { register, handleSubmit, reset, formState: { errors } } = useForm()
 
     const onSubmit = data => {
-        console.log(data)
+        // console.log(data)
+
+        const todo = {
+            title:data.title,
+            description:data.description,
+            deadline:data.deadline,
+            priority:data.priority,
+            email: user?.email
+        }
+
+        axiosPublic.post('/toDos', todo)
+        .then(res =>{
+            console.log(res.data);
+            if (res.data.insertedId) {
+                Swal.fire({
+                    position: "top-end",
+                    icon: "success",
+                    title: "Task Created Successfully",
+                    showConfirmButton: false,
+                    timer: 1500
+                });
+                reset()
+            }
+        })
+        
+
+
+
+
 
     }
 
