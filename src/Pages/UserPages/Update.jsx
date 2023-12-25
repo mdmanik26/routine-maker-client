@@ -18,7 +18,7 @@ const Update = () => {
     
         const updateTodo = { title, description, deadline, priority }
 
-        fetch(`http://localhost:5000/update/${_id}`, {
+        fetch(`https://job-task-server-alpha-five.vercel.app/update/${_id}`, {
             method: 'PUT',
             headers: {
                 "content-type": 'application/json'
@@ -80,7 +80,7 @@ const Update = () => {
                     </div>
                 </div>
 
-                <input className='btn bg-violet-600 w-full mt-4 text-white' type="submit" name="" value="Create Task" />
+                <input className='btn bg-violet-600 w-full mt-4 text-white' type="submit" name="" value="Update Task" />
             </form>
         </div>
     );

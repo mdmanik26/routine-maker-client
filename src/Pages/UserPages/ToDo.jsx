@@ -13,7 +13,7 @@ const ToDo = () => {
     const [todos, setTodos] = useState([])
 
     useEffect(() => {
-        fetch(`http://localhost:5000/todos/${user?.email}`)
+        fetch(`https://job-task-server-alpha-five.vercel.app/todos/${user?.email}`)
             .then(res => res.json())
             .then(data => setTodos(data))
 
@@ -33,7 +33,7 @@ const ToDo = () => {
             .then((result) => {
                 if (result.isConfirmed) {
 
-                    fetch(`http://localhost:5000/todos/${_id}`, {
+                    fetch(`https://job-task-server-alpha-five.vercel.app/todos/${_id}`, {
                         method: 'delete'
                     })
                         .then(res => res.json())
@@ -41,7 +41,7 @@ const ToDo = () => {
                             console.log(data);
                             if (data.deletedCount > 0) {
                                 Swal.fire(
-                                    'Returned!',
+                                    'Deleted!',
                                     'You have deleted the task successfully.',
                                     'success'
                                 )

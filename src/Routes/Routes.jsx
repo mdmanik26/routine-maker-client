@@ -44,7 +44,7 @@ export const router = createBrowserRouter([
                     {
                         path: '/dashboard/update/:id',
                         element: <PrivateRoutes><Update></Update></PrivateRoutes>,
-                        loader: ({params}) => fetch(`http://localhost:5000/todo/${params.id}`)
+                        loader: ({params}) => fetch(`https://job-task-server-alpha-five.vercel.app/todo/${params.id}`)
                     },
                 ]
             }
