@@ -1,3 +1,4 @@
+import AppUsers from "../Components/AppUsers";
 import Banner from "../Components/Banner";
 import Faq from "../Components/Faq";
 import MobileApp from "../Components/MobileApp";
@@ -14,6 +15,7 @@ const Home = () => {
             <Container><MobileApp></MobileApp></Container>
             <Container><Package></Package></Container>
             <Container><Faq></Faq></Container>
+            <Container><AppUsers></AppUsers></Container>
             <Footer></Footer>
         </div>
     );

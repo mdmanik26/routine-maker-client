@@ -31,7 +31,7 @@ const Update = () => {
                 if (data.modifiedCount > 0) {
                     Swal.fire({
                         title: 'Success!',
-                        text: 'Todo updated successfully',
+                        text: 'Task updated successfully',
                         icon: 'success',
                         confirmButtonText: 'OK'
                     })

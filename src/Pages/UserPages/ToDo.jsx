@@ -23,7 +23,7 @@ const ToDo = () => {
 
         Swal.fire({
             title: 'Are you sure?',
-            text: "You want to return the book!",
+            text: "You want to delete the task!",
             icon: 'warning',
             showCancelButton: true,
             confirmButtonColor: '#3085d6',
@@ -42,7 +42,7 @@ const ToDo = () => {
                             if (data.deletedCount > 0) {
                                 Swal.fire(
                                     'Returned!',
-                                    'You have returned the book successfully.',
+                                    'You have deleted the task successfully.',
                                     'success'
                                 )
                             }

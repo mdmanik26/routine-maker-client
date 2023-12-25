@@ -27,7 +27,7 @@ const Login = () => {
                     showConfirmButton: false,
                     timer: 1500
                 });
-                navigate('/dashboard')
+                navigate('/dashboard/toDo')
             })
             .catch(err => {
                 if (err) {
