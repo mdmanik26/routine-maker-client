@@ -7,8 +7,8 @@ import { useContext } from "react";
 import { AuthContext } from "../Shared/AuthProvider";
 const Dashboard = () => {
     const {user} = useContext(AuthContext)
-    console.log(user);
-    const isAdmin = false
+   
+   
     return (
         <Container>
             <div className="flex ">
@@ -19,27 +19,7 @@ const Dashboard = () => {
                     </div>
                     <ul className="menu text-xl p-3">
 
-                        {isAdmin ?
-
                             <>
-
-                                <li className="hover:bg-fuchsia-400 rounded-lg">
-                                    <NavLink to={'/dashboard/adminHome'}>
-                                        <FaHome></FaHome>
-                                        Admin Home</NavLink>
-                                </li>
-
-
-
-
-                            </> :
-
-                            <>
-                                <li>
-                                    <NavLink to={'/dashboard/userHome'}>
-                                        <FaHome></FaHome>
-                                        User Home</NavLink>
-                                </li>
                                 <li className="text-md">
                                     <NavLink to={'/dashboard/createTask'}>
                                         <IoCreateOutline></IoCreateOutline>
@@ -52,7 +32,7 @@ const Dashboard = () => {
                                 </li>
                             
 
-                            </>}
+                            </>
                         <div className="divider"></div>
                         <li>
                             <NavLink to={'/'}>

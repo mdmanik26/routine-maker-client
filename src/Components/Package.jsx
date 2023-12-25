@@ -1,7 +1,7 @@
 
 const Package = () => {
     return (
-        <div className="my-10">
+        <div id="pack" className="my-10">
             <h1 className="text-5xl font-bold text-center mx-auto mb-16 max-w-[1000px] text-violet-600 ">Make your Routine more easier</h1>
             <div className="grid grid-cols-1 lg:grid-cols-3 px-20 md:px-4 lg:px-20 gap-10">
 

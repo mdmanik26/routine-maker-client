@@ -35,6 +35,9 @@ const Navbar = () => {
                                 user ? <ul className={` z-10 font-semibold shadow-lg rounded-md md:shadow-lg lg:shadow-none lg:flex absolute lg:static gap-6 text-lg 
         ${menu ? "top-18 left-8 bg-white lg:bg-transparent text-black" : "-top-40 right-8"}`}>
                                     <li className="  text-black md:text-black text-center lg:text-left lg:border-0 px-2 lg:px-0"><NavLink to={'/'}>Home</NavLink></li>
+                                    <li className="  text-black md:text-black text-center lg:text-left lg:border-0 px-2 lg:px-0"><a href="#faq">FAQ</a></li>
+                                    <li className="  text-black md:text-black text-center lg:text-left lg:border-0 px-2 lg:px-0"><a href="#pack">Packages</a></li>
+                                    <li className="  text-black md:text-black text-center lg:text-left lg:border-0 px-2 lg:px-0"><a href="#users">App Users</a></li>
 
                                 </ul> :
 
@@ -76,7 +79,7 @@ ${menu ? "top-18 left-8 bg-white lg:bg-transparent text-black" : "-top-40 right-
 
 
                                         <p className="text-center font-semibold text-lg"> {user?.displayName} </p>
-                                        <Link to={'/dashboard'}>
+                                        <Link to={'/dashboard/toDo'}>
                                             <button
 
                                                 className='px-4 py-3 hover:bg-neutral-100 transition font-semibold w-full'>

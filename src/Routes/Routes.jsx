@@ -4,10 +4,10 @@ import Home from "../Pages/Home";
 import Login from "../Pages/Login";
 import Register from "../Pages/Register";
 import Dashboard from "../Layout/Dashboard";
-import AdminHome from "../Pages/AdminPages/AdminHome";
-import UserHome from "../Pages/UserPages/UserHome";
+
 import CreateTask from "../Pages/UserPages/CreateTask";
 import ToDo from "../Pages/UserPages/ToDo";
+import Update from "../Pages/UserPages/Update";
 
 export const router = createBrowserRouter([
     {
@@ -31,14 +31,7 @@ export const router = createBrowserRouter([
                 path:'/dashboard',
                 element: <Dashboard></Dashboard>,
                 children:[
-                    {
-                        path: '/dashboard/adminHome',
-                        element: <AdminHome></AdminHome>
-                    },
-                    {
-                        path: '/dashboard/userHome',
-                        element: <UserHome></UserHome>
-                    },
+                   
                     {
                         path: '/dashboard/createTask',
                         element: <CreateTask></CreateTask>
@@ -46,7 +39,12 @@ export const router = createBrowserRouter([
                     {
                         path: '/dashboard/toDo',
                         element: <ToDo></ToDo>
-                    }
+                    },
+                    {
+                        path: '/dashboard/update/:id',
+                        element: <Update></Update>,
+                        loader: ({params}) => fetch(`http://localhost:5000/todo/${params.id}`)
+                    },
                 ]
             }
             
